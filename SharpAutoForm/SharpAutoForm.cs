@@ -81,7 +81,7 @@ namespace SharpAutoForm
             double AmountDue;
 
 
-            // Add the price of selected accessories and exterior finish to the base price and display the result the Subtotal Text Box.
+            // Add the price of selected accessories and exterior finish to the base price and display the result the Subtotal Text Box
             if (StereoSystemCheckBox.Checked)
             {
                 Price += 425.76;
@@ -120,7 +120,7 @@ namespace SharpAutoForm
 
             /*
             * ii. Write a function procedure to calculate and return the Sales Tax (13%) on the SubTotal
-            * and display the result in the Total Text Field.
+            * and display the result in the Total Text Field
             */
 
             SalesTax = Price * 0.13;
@@ -133,7 +133,7 @@ namespace SharpAutoForm
 
             /*
             * iii. Subtract any Trade-in amount from the total and display the result of the calculations
-            * in the Amount Due Text Field.
+            * in the Amount Due Text Field
             */
             AmountDue = TradeInAmount - (SalesTax + Price);
             AmountDueTextBox.Text = AmountDue.ToString("C2");
