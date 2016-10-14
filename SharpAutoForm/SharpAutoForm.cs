@@ -81,7 +81,7 @@ namespace SharpAutoForm
             double AmountDue;
 
 
-            // Add the price of selected accessories and exterior finish to the base price and display the result the Subtotal Text Box
+            // Add the price of selected accessories and exterior finish to the base price and display the result the Subtotal Text Box.
             if (StereoSystemCheckBox.Checked)
             {
                 Price += 425.76;
