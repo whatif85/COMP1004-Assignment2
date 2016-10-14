@@ -35,6 +35,16 @@ namespace SharpAutoForm
 
         private void ClearButton_Click(object sender, EventArgs e)
         {
+            ClearAll();
+        }
+
+        private void ClearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ClearAll();
+        }
+
+        private void ClearAll()
+        {
             // Clear all textboxes
             AdditionalOptionsTextBox.Text = String.Empty;
             SubTotalTextBox.Text = String.Empty;
@@ -55,54 +65,149 @@ namespace SharpAutoForm
 
         private void CalculateButton_Click(object sender, EventArgs e)
         {
+            CalculateTotal();
+        }
+        private void CalculateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CalculateTotal();
+        }
+
+        private void CalculateTotal()
+        { 
+            double Price = 0.0;
+            double Total;
+            double SalesTax;
+            double TradeInAmount = 10.0;
+            double AmountDue;
+
+
+            // Add the price of selected accessories and exterior finish to the base price and display the result the Subtotal Text Box.
+            if (StereoSystemCheckBox.Checked)
+            {
+                Price += 425.76;
+                SubTotalTextBox.Text = Price.ToString("C2");
+            }
+
+            if (LeatherInteriorCheckBox.Checked)
+            {
+                Price += 987.41;
+                SubTotalTextBox.Text = Price.ToString("C2");
+            }
+
+            if (ComputerNavigationCheckBox.Checked)
+            {
+                Price += 1741.23;
+                SubTotalTextBox.Text = Price.ToString("C2");
+            }
+
+            if (StandardFinishRadioButton.Checked)
+            {
+                Price += 0.00;
+                SubTotalTextBox.Text = Price.ToString("C2");
+            }
+
+            if (PearlizedFinishRadioButton.Checked)
+            {
+                Price += 345.72;
+                SubTotalTextBox.Text = Price.ToString("C2");
+            }
+
+            if (CustomizedDetailingRadioButton.Checked)
+            {
+                Price += 599.99;
+                SubTotalTextBox.Text = Price.ToString("C2");
+            }
+
             /*
-            TotalMonthlySales = Convert.ToDouble(TotalMonthlySalesTextBox.Text);
-                    // TotalBonusAmount = Convert.ToDouble(SalesBonusTextBox);
-
-                    // 1. Determine the Percentage of hours worked during the bonus period
-                    // Divide the Total Hours  Worked by 160
-                    PercentageHoursWorked = HoursWorked / 160;
-
-                    // 2. Calculate 2% of Sales which is the Total Bonus Amount.
-                    // Multiply Total Monthly Sales by 0.02
-                    BonusAmount = TotalMonthlySales * 0.02;
-
-                    // 3. Determine the value you need to display in the Sales Bonus Text Field
-                    // Multiply the Percentage of Hours Worked by the Total Bonus Amount
-                    SalesBonus = PercentageHoursWorked * BonusAmount;
-
-                    // Display DiscountAmount in related Text Box
-                    TotalMonthlySalesTextBox.Text = TotalMonthlySales.ToString("C2"); // $ in two decimal places
-                    // Display Bonus in related Text Box
-                    SalesBonusTextBox.Text = SalesBonus.ToString("C2");
+            * ii. Write a function procedure to calculate and return the Sales Tax (13%) on the SubTotal
+            * and display the result in the Total Text Field.
             */
 
+            SalesTax = Price * 0.13;
+            SalesTaxTextBox.Text = SalesTax.ToString("C2");
+            Total = SalesTax + Price;
+            TotalTextBox.Text = Total.ToString("C2");
+
+            Total -= TradeInAmount;
+            TradeInAllowanceTextBox.Text = TradeInAmount.ToString("C2");
+
             /*
-            i. Add the price of selected accessories and exterior finish to the base price and display
-                the result the Subtotal Text Box.
-            ii. Write a function procedure to calculate and return the Sales Tax (13%) on the SubTotal
-                and display the result in the Total Text Field.
-            iii. Subtract any Trade-in amount from the total and display the result of the calculations in
-            the Amount Due Text Field.
-
-            Stereo System           $425.76
-            Leather Interior        $987.41
-            Computer Navigation     $1,741.23
-            Standard                No Additional Charge
-            Pearlized               $345.72
-            Customized Detailing    $599.99
-            Tax Rate                13.0%
-
-            double AccessoryStereoSystemCost;
-            double AccessoryLeatherInteriorCost;
-            double AccessoryComputerNavigationCost;
-
-            double PearlizedFinish;
-            double CustomDetailing;
-            
-            double TaxRate = 0.13;
-
+            * iii. Subtract any Trade-in amount from the total and display the result of the calculations
+            * in the Amount Due Text Field.
             */
+            AmountDue = TradeInAmount - (SalesTax + Price);
+            AmountDueTextBox.Text = AmountDue.ToString("C2");
+        }
+
+        private void StereoSystemCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            BaseCost();
+        }
+
+        private void LeatherInteriorCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            BaseCost();
+        }
+
+        private void ComputerNavigationCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            BaseCost();
+        }
+
+        private void StandardFinishRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            BaseCost();
+        }
+
+        private void PearlizedFinishRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            BaseCost();
+        }
+
+        private void CustomizedDetailingRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            BaseCost();
+        }
+
+        private void BaseCost()
+        {
+            double AccessoryCost = 0.0;
+
+            if (StereoSystemCheckBox.Checked)
+            {
+                AccessoryCost += 425.76;
+                BasePriceTextBox.Text = AccessoryCost.ToString("C2");
+            }
+
+            if (LeatherInteriorCheckBox.Checked)
+            {
+                AccessoryCost += 987.41;
+                BasePriceTextBox.Text = AccessoryCost.ToString("C2");
+            }
+
+            if (ComputerNavigationCheckBox.Checked)
+            {
+                AccessoryCost += 1741.23;
+                BasePriceTextBox.Text = AccessoryCost.ToString("C2");
+            }
+
+            if (StandardFinishRadioButton.Checked)
+            {
+                AccessoryCost += 0.0;
+                BasePriceTextBox.Text = AccessoryCost.ToString("C2");
+            }
+
+            if (PearlizedFinishRadioButton.Checked)
+            {
+                AccessoryCost += 345.72;
+                BasePriceTextBox.Text = AccessoryCost.ToString("C2");
+            }
+
+            if (CustomizedDetailingRadioButton.Checked)
+            {
+                AccessoryCost += 599.99;
+                BasePriceTextBox.Text = AccessoryCost.ToString("C2");
+            }
         }
     }
 }
