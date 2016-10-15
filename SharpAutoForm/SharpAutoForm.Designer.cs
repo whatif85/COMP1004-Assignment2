@@ -163,7 +163,6 @@
             this.BasePriceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BasePriceTextBox.Location = new System.Drawing.Point(193, 52);
             this.BasePriceTextBox.Name = "BasePriceTextBox";
-            this.BasePriceTextBox.ReadOnly = true;
             this.BasePriceTextBox.Size = new System.Drawing.Size(146, 30);
             this.BasePriceTextBox.TabIndex = 2;
             // 
@@ -182,6 +181,7 @@
             this.AdditionalOptionsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdditionalOptionsTextBox.Location = new System.Drawing.Point(193, 88);
             this.AdditionalOptionsTextBox.Name = "AdditionalOptionsTextBox";
+            this.AdditionalOptionsTextBox.ReadOnly = true;
             this.AdditionalOptionsTextBox.Size = new System.Drawing.Size(146, 30);
             this.AdditionalOptionsTextBox.TabIndex = 2;
             // 
@@ -200,6 +200,7 @@
             this.SubTotalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubTotalTextBox.Location = new System.Drawing.Point(193, 124);
             this.SubTotalTextBox.Name = "SubTotalTextBox";
+            this.SubTotalTextBox.ReadOnly = true;
             this.SubTotalTextBox.Size = new System.Drawing.Size(146, 30);
             this.SubTotalTextBox.TabIndex = 2;
             this.SubTotalTextBox.Text = "$0.00";
@@ -219,6 +220,7 @@
             this.SalesTaxTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SalesTaxTextBox.Location = new System.Drawing.Point(193, 160);
             this.SalesTaxTextBox.Name = "SalesTaxTextBox";
+            this.SalesTaxTextBox.ReadOnly = true;
             this.SalesTaxTextBox.Size = new System.Drawing.Size(146, 30);
             this.SalesTaxTextBox.TabIndex = 2;
             // 
@@ -227,6 +229,7 @@
             this.TotalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalTextBox.Location = new System.Drawing.Point(193, 196);
             this.TotalTextBox.Name = "TotalTextBox";
+            this.TotalTextBox.ReadOnly = true;
             this.TotalTextBox.Size = new System.Drawing.Size(146, 30);
             this.TotalTextBox.TabIndex = 2;
             // 
@@ -255,7 +258,6 @@
             this.TradeInAllowanceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TradeInAllowanceTextBox.Location = new System.Drawing.Point(193, 232);
             this.TradeInAllowanceTextBox.Name = "TradeInAllowanceTextBox";
-            this.TradeInAllowanceTextBox.ReadOnly = true;
             this.TradeInAllowanceTextBox.Size = new System.Drawing.Size(146, 30);
             this.TradeInAllowanceTextBox.TabIndex = 2;
             this.TradeInAllowanceTextBox.Text = "0";
@@ -275,6 +277,7 @@
             this.AmountDueTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AmountDueTextBox.Location = new System.Drawing.Point(193, 268);
             this.AmountDueTextBox.Name = "AmountDueTextBox";
+            this.AmountDueTextBox.ReadOnly = true;
             this.AmountDueTextBox.Size = new System.Drawing.Size(146, 30);
             this.AmountDueTextBox.TabIndex = 2;
             // 

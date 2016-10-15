@@ -81,7 +81,7 @@ namespace SharpAutoForm
             double AmountDue;
 
 
-            // Add the price of selected accessories and exterior finish to the base price and display the result the Subtotal Text Box.
+            // Add the price of selected accessories and exterior finish to the base price and display the result the Subtotal Text Box
             if (StereoSystemCheckBox.Checked)
             {
                 Price += 425.76;
@@ -137,77 +137,6 @@ namespace SharpAutoForm
             */
             AmountDue = TradeInAmount - (SalesTax + Price);
             AmountDueTextBox.Text = AmountDue.ToString("C2");
-        }
-
-        private void StereoSystemCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            BaseCost();
-        }
-
-        private void LeatherInteriorCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            BaseCost();
-        }
-
-        private void ComputerNavigationCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            BaseCost();
-        }
-
-        private void StandardFinishRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            BaseCost();
-        }
-
-        private void PearlizedFinishRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            BaseCost();
-        }
-
-        private void CustomizedDetailingRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            BaseCost();
-        }
-
-        private void BaseCost()
-        {
-            double AccessoryCost = 0.0;
-
-            if (StereoSystemCheckBox.Checked)
-            {
-                AccessoryCost += 425.76;
-                BasePriceTextBox.Text = AccessoryCost.ToString("C2");
-            }
-
-            if (LeatherInteriorCheckBox.Checked)
-            {
-                AccessoryCost += 987.41;
-                BasePriceTextBox.Text = AccessoryCost.ToString("C2");
-            }
-
-            if (ComputerNavigationCheckBox.Checked)
-            {
-                AccessoryCost += 1741.23;
-                BasePriceTextBox.Text = AccessoryCost.ToString("C2");
-            }
-
-            if (StandardFinishRadioButton.Checked)
-            {
-                AccessoryCost += 0.0;
-                BasePriceTextBox.Text = AccessoryCost.ToString("C2");
-            }
-
-            if (PearlizedFinishRadioButton.Checked)
-            {
-                AccessoryCost += 345.72;
-                BasePriceTextBox.Text = AccessoryCost.ToString("C2");
-            }
-
-            if (CustomizedDetailingRadioButton.Checked)
-            {
-                AccessoryCost += 599.99;
-                BasePriceTextBox.Text = AccessoryCost.ToString("C2");
-            }
         }
     }
 }
